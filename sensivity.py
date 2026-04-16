@@ -2,13 +2,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import rcParams
 
-# تنظیمات زیبایی شناسی
+
 rcParams['font.family'] = 'serif'
 rcParams['font.size'] = 12
 
 plt.style.use('seaborn-v0_8-darkgrid')
 
-# تعریف پارامترها و توابع
+# functiona and parameter
 t_vals = np.linspace(0, 2, 500)
 tau1_vals = [0.7, 0.8, 0.9]
 tau2_vals = [0.7, 0.8, 0.9]
@@ -17,10 +17,10 @@ ell_vals = [np.pi/2, np.pi, 2*np.pi]
 def zeta_solution(t, tau1, tau2, ell):
     return np.exp(-ell * t**tau1) * np.cos(ell * t**tau2)
 
-# رنگ‌های سفارشی برای همه نمودارها (سیاه، قرمز، سبز)
+
 custom_colors = ['black', 'red', 'blue']
 
-# ایجاد نمودارها
+# fig
 def create_sensitivity_plot(x, y_list, param_name, param_vals, colors=custom_colors):
     fig, ax = plt.subplots(figsize=(10, 6))
     
@@ -38,15 +38,15 @@ def create_sensitivity_plot(x, y_list, param_name, param_vals, colors=custom_col
     
     return fig
 
-# تحلیل حساسیت τ1
+# sens τ1
 zeta_tau1 = [zeta_solution(t_vals, tau1, 4/5, np.pi) for tau1 in tau1_vals]
 fig1 = create_sensitivity_plot(t_vals, zeta_tau1, r'\tau_1', tau1_vals)
 
-# تحلیل حساسیت τ2
+# sens τ2
 zeta_tau2 = [zeta_solution(t_vals, 4/5, tau2, np.pi) for tau2 in tau2_vals]
 fig2 = create_sensitivity_plot(t_vals, zeta_tau2, r'\tau_2', tau2_vals)
 
-# تحلیل حساسیت ℓ
+# sens ℓ
 zeta_ell = [zeta_solution(t_vals, 4/5, 10/11, ell) for ell in ell_vals]
 fig3 = create_sensitivity_plot(t_vals, zeta_ell, r'\ell', ell_vals)
 
