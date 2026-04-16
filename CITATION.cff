@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using these metadata."
+title: "OAT Sensitivity Analysis for Fractional Langevin Differential Inclusion"
+authors:
+  - family-names: "Ghaderi"
+    given-names: "Mehran"
+  - family-names: "Rezapour"
+    given-names: "Shahram"
+version: 1.0.0
+date-released: 2026-04-16
+repository-code: "https://github.com/ghaderimehr-boop/OAT-Sensitivity-Langevin-Inclusion"
+doi: "10.5281/zenodo.XXXXXXXX"
+license: "MIT"
+keywords:
+  - fractional calculus
+  - differential inclusion
+  - Langevin equation
+  - sensitivity analysis
+  - OAT method
