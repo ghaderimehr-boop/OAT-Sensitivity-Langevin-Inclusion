@@ -6,7 +6,8 @@
 
 This repository contains Python codes for the numerical simulation and One-Factor-At-a-Time (OAT) sensitivity analysis of a fractional-order hybrid Langevin system formulated as a differential inclusion. The work accompanies the research article:
 
-> M. Ghaderi, S. Rezapour, "Dynamic analysis of fractional-order and viscous damping effect on differential inclusion modeling of Langevin nonlinear hybrid system", *Mathematics and Computers in Simulation* (2026).
+> M. Ghaderi, S. Rezapour, "Dynamic analysis and parameter sensitivity of a fractional-order
+Langevin hybrid differential inclusion with viscous damping", *Mathematics and Computers in Simulation* (2026).
 
 ## Features
 
